@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+scroll-behavior: smooth;
+
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background: rgb(56,1,20);
+    background: linear-gradient(67deg, rgba(56,1,20,1) 4%, rgba(3,2,2,1) 96%);    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: white 2px 2px 3px;
+    top: 0;
+}
+
+header .log{
+    font-family: 'Playball', cursive;
+    color: rgb(10, 255, 255);
+    font-size: 30px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    padding:  5px 10px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+header ul li a.active,
+header ul li a:hover{
+    background-color: #205aff;
+}
+
+.toggel{
+    display: none;
+    position: relative;
+}
+/* All thwe section */
+/* section{
+    margin: auto;
+    max-width: 1000px;
+    min-height: 500px;
+} */
+/* Section 1 */
+.sec0{
+    margin-top: 75px;
+    margin-bottom: 15px;
+    background: url('odnoklassnik/vakhs.jpg') center no-repeat;
+    background-size: cover;
+    height: 330px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    transition: 1s;
+}
+
+
+ 
+ .bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(41, 0, 43, 0.856);
+    padding: 5px;
+    
+}
+.bg p{
+    font-style: italic;
+    max-width: 700px;
+    color: rgba(195, 209, 2, 0.829);
+    font-size: 25px;
+    font-weight: bold;
+    line-height: -7px;
+    margin: 0 25px;
+}
+
+
+.sec1{
+    text-align: center;
+    background: url('odnoklassnik/all4.jpg') center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    border: #000 solid red;
+    display: flex;
+    align-items: flex-end;
+    transition: 1s;
+}
+
+.sec1 .bg-text{
+    background-color: rgb(17, 13, 5);
+    color: rgb(81, 255, 0);
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* Slider div */
+.silider {
+    max-width: 1000px;
+    margin: 10px auto;
+    text-align: center;
+}
+  .silider .container{
+    background: rgb(0, 0, 0);
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+}
+.silider .contant{
+    margin-top: 20px;
+    padding: 5px;
+    height: 700px;
+    width: 600px;
+    min-width: 300px;
+    min-height: 450px;
+    box-shadow: -1px 1px 13px 3px #07be9d;
+    background: url('img/ime1\ \(10\).jpg') center center;
+    background-size: 100% 100%;
+
+}
+
+.silider #last-button, #next-button{
+    position: absolute; 
+}
+.silider #next-button{
+    right: 0.4%;
+}
+.silider #last-button, #next-button,span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background: #000;
+    color: red;
+    box-shadow: 2px 1px 9px 4px #b007ab;
+    border-radius: 50%;
+    cursor: pointer;
+    bottom: 10%;
+    outline: none;
+}
+.silider #last-button:hover, #next-button:hover, span{
+background-color: rgb(245, 226, 57);
+}
+.silider #next:nth-child(1){
+    color: rgb(49, 46, 46);
+    width: 17px;
+    background: #000;
+    height: 3px;
+    margin: 0 0 5px;
+    transform: rotate(23deg); 
+}
+
+#next:nth-child(2){
+    color: rgb(49, 46, 46);
+    width: 18px;
+    background: #000;
+    transform: rotate(-28deg); 
+    height: 2px;
+}
+
+
+#last:nth-child(1){
+    color: rgb(49, 46, 46);
+    width: 17px;
+    background: #000;
+    height: 3px;
+    margin: 0 0 5px;
+    transform: rotate(-28deg); 
+}
+
+#last:nth-child(2){
+    color: rgb(49, 46, 46);
+    width: 18px;
+    background: #000;
+    transform: rotate(25deg); 
+    height: 2px;
+}
+
+
+@media (max-width: 800px){
+    
+   
+    header ul{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100vh -80px);
+        padding: 90px 100px 30px;
+        text-align: center;
+        overflow: auto;
+        transition: 0.9s;
+        flex-direction: column;
+        background-color: #111;
+        z-index: -1;
+        transform: translateY(-100%);
+    }
+    header.active ul{
+        
+        transform: translateY(0);
+    }
+    header ul li{
+        margin-top: 20px;
+    } 
+    .toggel{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        left: 80px;
+        cursor: pointer;
+        background-color: #111;
+    }
+    .toggel::before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        z-index: 1;
+        box-shadow: 0px 10px 0px rgb(255, 246, 246);
+        transition: 0.5s;
+
+    }
+    .toggel::after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 3.3px;
+        background-color: rgb(255, 250, 250);
+        z-index: 1;
+        transition: 0.5s;
+
+    }
+
+    header.active .toggel::before{
+        top: 14px;
+        transform: rotate(-45deg);
+        box-shadow: 0 0 0 rgb(255, 251, 251);
+    }
+    header.active .toggel::after{
+        top: 14px;
+        transform: rotate(45deg);
+       
+    }
+    .log{
+        position: relative;
+        right: 70px
+
+    }
+
+    .silider {
+        border: 1px solid gray;
+        margin: 10px auto;
+        text-align: center;
+    }
+    .silider .contant{
+        margin-top: 20px;
+        height: 500px;
+        width: auto;
+        min-width: 370px;
+        min-height: 450px;
+    }
+}
